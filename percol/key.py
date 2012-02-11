@@ -17,13 +17,14 @@
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
 
-import curses, array, debug
+import curses, array, debug, curses.ascii
 
 SPECIAL_KEYS = {
     curses.KEY_A1        : "<a1>",
     curses.KEY_A3        : "<a3>",
     curses.KEY_B2        : "<b2>",
     curses.KEY_BACKSPACE : "<backspace>",
+    curses.ascii.DEL     : "<backspace>",
     curses.KEY_BEG       : "<beg>",
     curses.KEY_BREAK     : "<break>",
     curses.KEY_BTAB      : "<btab>",
