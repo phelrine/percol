@@ -18,14 +18,16 @@
 #
 
 import pprint
+import os
 
 pp = pprint.PrettyPrinter(indent=2)
+logfile = "/tmp/percol-%s-log" % os.getuid()
 
 def log(name, s = ""):
-    with open("/tmp/percol-log", "a") as f:
+    with open(logfile, "a") as f:
         f.write(str(name) + " : " + str(s) + "\n")
 
 def dump(obj):
-    with open("/tmp/percol-log", "a") as f:
+    with open(logfile, "a") as f:
         f.write(pp.pformat(obj) + "\n")
     return obj
